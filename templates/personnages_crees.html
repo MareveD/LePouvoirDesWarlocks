@@ -4,6 +4,31 @@
 Personnages créés
 {% endblock %}
 
+{% block menu %}
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 px-0">
+        <nav class="d-flex justify-content-start pt-3" aria-label="Navigation secondaire">
+          <ul class="nav flex-column align-items-end">
+            <li><a class="nav-link m-2" href="/accueil" aria-label="Accueil">Accueil <i
+                  class="bi bi-house-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            </li>
+            <li><a class="nav-link m-2" href="/creation" aria-label="Creation">Création <i
+                  class="bi bi-lightning-charge-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            </li>
+            <li><a class="nav-link m-2" href="/personnages_crees" aria-label="Personnages Crees">Personnages Crées <i
+                  class="bi bi-hexagon d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            </li>
+            <li><a class="nav-link m-2" href="/personnages_par_defaut" aria-label="Personnages par defaut">Personnages
+                par défaut <i
+                  class="bi bi-journals d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+{% endblock %}
+
 {% block contenu %}
 <div class="col-lg-10 px-0">
   <div class="row mx-0">
