@@ -7,142 +7,159 @@ Personnage par défaut
 {% block menu %}
 <main id="contenu">
     <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-2 px-0">
-        <nav class="d-flex justify-content-start pt-3" aria-label="Navigation secondaire">
-          <ul class="nav flex-column align-items-end">
-            <li><a class="nav-link m-2" href="/accueil" aria-label="Accueil">Accueil <i
-                  class="bi bi-house-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
-            </li>
-            <li><a class="nav-link m-2" href="/creation" aria-label="Creation">Création <i
-                  class="bi bi-lightning-charge-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
-            </li>
-            <li><a class="nav-link m-2" href="/personnages_crees" aria-label="Personnages Crees">Personnages Crées <i
-                  class="bi bi-hexagon d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
-            </li>
-            <li><a class="nav-link m-2 active" href="/personnages_par_defaut" aria-label="Personnages par defaut" aria-current="page">Personnages
-                par défaut <i
-                  class="bi bi-journals d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-{% endblock %}
-
-{% block contenu %}
-<div class="col-lg-10 px-0">
-    <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
-        Ceci est un personnage par défaut !
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
-    </div>
-    <div class="uni-container">
-        <h2>Celia Darkhands</h2>
-        <div class="card-subtitle mb-2 text-muted">L’Archifey</div>
         <div class="row">
-            <div class="col-xl-2">Image personnage
+            <div class="col-lg-2 px-0">
+                <nav class="d-flex justify-content-start pt-3" aria-label="Navigation secondaire">
+                    <ul class="nav flex-column align-items-end">
+                        <li><a class="nav-link m-2" href="/accueil" aria-label="Accueil">Accueil <i
+                                    class="bi bi-house-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+                        </li>
+                        <li><a class="nav-link m-2" href="/creation" aria-label="Creation">Création <i
+                                    class="bi bi-lightning-charge-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+                        </li>
+                        <li><a class="nav-link m-2" href="/personnages_crees" aria-label="Personnages Crees">Personnages
+                                Crées <i
+                                    class="bi bi-hexagon d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+                        </li>
+                        <li><a class="nav-link m-2 active" href="/personnages_par_defaut"
+                                aria-label="Personnages par defaut" aria-current="page">Personnages
+                                par défaut <i
+                                    class="bi bi-journals d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <div class="col-xl-10">
+            {% endblock %}
 
-                <p>"Oh mère de toutes les sorcières, accorde-moi ta force et ta sagesse.
+            {% block contenu %}
+            <div class="col-lg-10 px-0">
+                <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                    Ceci est un personnage par défaut !
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
+                </div>
+                <div class="uni-container">
+                    <h2>Celia Darkhands</h2>
+                    <div class="card-subtitle fs-4 mb-2 text-center">L’Archifey</div>
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <img src="../static/img/celia.png" class="img-fluid" alt="Celia Darkhands">
+                        </div>
+                        <div class="col-xl-10">
 
-                    Oh, cher patron, montrez-moi ce qui doit être fait.
+                            <p class="text-center">"Oh mère de toutes les sorcières, accorde-moi ta force et ta sagesse.<br>
+                                Oh, cher patron, montrez-moi ce qui doit être fait.<br>
+                                Baba Yaga, grand-mère de nous tous, montre-nous le chemin du pouvoir,<br>
+                                Grâce à ce sacrifice à cette heure de la sorcellerie."</p>
 
-                    Baba Yaga, grand-mère de nous tous, montre-nous le chemin du pouvoir,
+                            <p>Je m'appelle Célia. Mes sœurs et moi nous appelons Darkhands, mais les gens m'appellent
+                                la Wicked.
+                                Darkhands parce qu'ils sont noircis par le pouvoir… et Wicked parce que je suis une
+                                sorcière. Je
+                                n'ai pas toujours été… Mais un sombre appel m'a amené à mon alliance. C'était la foi en
+                                tant que
+                                sœur aînée Josephine Darkhands. "Tu ne serais pas ici si tu n'écoutais pas Ses sages
+                                paroles, ma
+                                chère" me dit-elle. Et je savais… je savais qu'elle avait raison. Mère de toutes les
+                                sorcières, Baba
+                                Yaga, m'a amené dans ma nouvelle famille afin que je puisse accomplir mon véritable
+                                destin.</p>
 
-                    Grâce à ce sacrifice à cette heure de la sorcellerie.
+                            <p> J'ai eu une autre famille autrefois. Maman ne pouvait pas concevoir, et elle ne pouvait
+                                pas se
+                                marier à cause de ça... La Maudite on l'appelait au village. Elle a cherché de l'aide
+                                auprès des
+                                médecins, mais aucun corps ne voulait la toucher, ils craignaient d'être empoisonnés
+                                même par sa
+                                seule aura. Maman était si désespérée d'avoir un enfant qu'elle a rencontré sœur
+                                Joséphine et notre
+                                fraternité. Elle s'est fait aider, à une condition : "quand ta copine aura 15 ans, elle
+                                appartiendra
+                                à notre sororité, sinon". Maman a accepté, même si cela signifiait une courte vie
+                                ensemble. Les gens
+                                ne l'ont pas crue quand elle est tombée enceinte... Qu'ils soient maudits pour la façon
+                                dont ils
+                                l'ont traitée quand elle m'a eu ! Seulement parce que j'étais différente, avec mes
+                                cheveux blancs…
+                                ils appelaient mes yeux dorés la Marque du Diable… Maman m'a toujours dit que j'étais
+                                spéciale et de
+                                ne jamais les écouter.</p>
 
+                            <p> Quand l'horloge a sonné minuit le jour de ma 15e année de vie, j'ai entendu sa voix.
+                                Mère toute
+                                puissante de nous tous, elle m'a parlé directement ! Je me sentais béni, le cœur de ma
+                                mère était
+                                brisé, alors que je partais pour trouver ma fraternité. Vrag m'y attendait. "Un cadeau
+                                de la Mère
+                                elle-même !" une de mes sœurs m'a dit : « Il t'accompagnera dans tes apprentissages et
+                                tes quêtes.
+                                Toutes mes sœurs ont été d'une grande aide pour m'aider à apprendre les bases de
+                                l'alchimie, de la
+                                fabrication de potions et de poisons, à canaliser mes pouvoirs obscurs et à m'élever en
+                                tant que
+                                véritable sœur de l'alliance Darkhands. Je ne sais pas où est maman, mais je suis sûr
+                                qu'elle serait
+                                fière. J'ai hâte d'accomplir mon véritable destin, "qui se déroulera dans le temps",
+                                ont-ils
+                                rassurés.</p>
 
+                            <p>Aujourd'hui, en cette heure magique marquant le jour de ma 19e année de vie et le jour de
+                                ma 4e
+                                année de renaissance, je suis prête à accomplir mon destin. <br><br>
 
-                    Je m'appelle Célia. Mes sœurs et moi nous appelons Darkhands, mais les gens m'appellent la Wicked.
-                    Darkhands parce qu'ils sont noircis par le pouvoir… et Wicked parce que je suis une sorcière. Je
-                    n'ai pas toujours été… Mais un sombre appel m'a amené à mon alliance. C'était la foi en tant que
-                    sœur aînée Josephine Darkhands. "Tu ne serais pas ici si tu n'écoutais pas Ses sages paroles, ma
-                    chère" me dit-elle. Et je savais… je savais qu'elle avait raison. Mère de toutes les sorcières, Baba
-                    Yaga, m'a amené dans ma nouvelle famille afin que je puisse accomplir mon véritable destin.
-
-
-
-                    J'ai eu une autre famille autrefois. Maman ne pouvait pas concevoir, et elle ne pouvait pas se
-                    marier à cause de ça... La Maudite on l'appelait au village. Elle a cherché de l'aide auprès des
-                    médecins, mais aucun corps ne voulait la toucher, ils craignaient d'être empoisonnés même par sa
-                    seule aura. Maman était si désespérée d'avoir un enfant qu'elle a rencontré sœur Joséphine et notre
-                    fraternité. Elle s'est fait aider, à une condition : "quand ta copine aura 15 ans, elle appartiendra
-                    à notre sororité, sinon". Maman a accepté, même si cela signifiait une courte vie ensemble. Les gens
-                    ne l'ont pas crue quand elle est tombée enceinte... Qu'ils soient maudits pour la façon dont ils
-                    l'ont traitée quand elle m'a eu ! Seulement parce que j'étais différente, avec mes cheveux blancs…
-                    ils appelaient mes yeux dorés la Marque du Diable… Maman m'a toujours dit que j'étais spéciale et de
-                    ne jamais les écouter.
-
-
-
-                    Quand l'horloge a sonné minuit le jour de ma 15e année de vie, j'ai entendu sa voix. Mère toute
-                    puissante de nous tous, elle m'a parlé directement ! Je me sentais béni, le cœur de ma mère était
-                    brisé, alors que je partais pour trouver ma fraternité. Vrag m'y attendait. "Un cadeau de la Mère
-                    elle-même !" une de mes sœurs m'a dit : « Il t'accompagnera dans tes apprentissages et tes quêtes.
-                    Toutes mes sœurs ont été d'une grande aide pour m'aider à apprendre les bases de l'alchimie, de la
-                    fabrication de potions et de poisons, à canaliser mes pouvoirs obscurs et à m'élever en tant que
-                    véritable sœur de l'alliance Darkhands. Je ne sais pas où est maman, mais je suis sûr qu'elle serait
-                    fière. J'ai hâte d'accomplir mon véritable destin, "qui se déroulera dans le temps", ont-ils
-                    rassurés.
-
-
-
-                    Aujourd'hui, en cette heure magique marquant le jour de ma 19e année de vie et le jour de ma 4e
-                    année de renaissance, je suis prêt à accomplir mon destin.
-
-
-
-                    "Allez Vrag."</p>
+                                "Allez Vrag."</p>
+                        </div>
+                    </div>
+                    <h3 id="statistique-personnage" class="text-center">Statistiques du personnage</h3>
+                    <table class="table table-hover table-bordered border-primary table-primary"
+                        aria-labelledby="statistique-personnage" title="Statistiques du personnage">
+                        <!-- <caption>Statistiques du personnage</caption> -->
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="colgroup" colspan="2">État</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold" scope="col">Caractéristiques</td>
+                                <td class="fw-bold" scope="col">Normal</td>
+                                <td class="fw-bold" scope="col">Fatigué</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Force</th>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Intelligence</th>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dextérité</th>
+                                <td>18</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Constitution</th>
+                                <td>12</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sagesse</th>
+                                <td>14</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Charisme</th>
+                                <td>20</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col" colspan="2">État</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Caractéristiques</td>
-                    <td>Normal</td>
-                    <td>Fatigué</td>
-                </tr>
-                <tr>
-                    <td>Force</td>
-                    <td>10</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Intelligence</td>
-                    <td>10</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Dextérité</td>
-                    <td>18</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Constitution</td>
-                    <td>12</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Sagesse</td>
-                    <td>14</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Charisme</td>
-                    <td>20</td>
-                    <td>10</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
-</div>
-</div>
-</div>
 </main>
 {% endblock %}

@@ -11398,4 +11398,8 @@ legend {
   border-radius: 10px;
 }
 
+.container-fluid > .row > nav, .container-sm > .row > nav, .container-md > .row > nav, .container-lg > .row > nav, .container-xl > .row > nav, .container-xxl > .row > nav {
+  background-color: rgba(73, 59, 117, 0.7) !important;
+}
+
 /*# sourceMappingURL=styles.css.map */

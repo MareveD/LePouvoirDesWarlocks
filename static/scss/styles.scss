@@ -254,7 +254,7 @@ footer figure figcaption {
     margin: 0.5em 0;
 }
 
-//TEST ANIMATION//
+//ANIMATION//
 @mixin fade-in($tempsAttente) {
     animation: wait #{$tempsAttente},
     fade-in 500ms #{$tempsAttente};
@@ -307,4 +307,9 @@ legend {
     color: $white-o;
     background-color: $primary;
     border-radius: 10px;
+}
+
+//BREADCRUMB//
+.container-fluid>.row>nav{
+    background-color: $primary-o !important;
 }
