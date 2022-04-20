@@ -4,89 +4,118 @@
 Accueil
 {% endblock %}
 
-{% block contenu %}
-<div class="col-lg-10 px-0">
-  <div class="row mx-0">
-    <div class="col-xl-6 px-0 d-flex justify-content-center align-items-center">
-      <div id="carousselAccueil" class="carousel slide w-75" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carousselAccueil" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Image 1"></button>
-          <button type="button" data-bs-target="#carousselAccueil" data-bs-slide-to="1" aria-label="Image 2"></button>
-          <button type="button" data-bs-target="#carousselAccueil" data-bs-slide-to="2" aria-label="Image 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../static/img/carou1.png" class="d-block mx-auto" max-width="100%" max-height="100%"
-              alt="Matériel occulte">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/carou2.png" class="d-block mx-auto" max-width="100%" max-height="100%"
-              alt="Bataille contre un ogre">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/img/carou3.png" class="d-block mx-auto" max-width="100%" max-height="100%"
-              alt="Partie d'échec">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousselAccueil" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousselAccueil" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+{% block menu %}
+<main id="contenu">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 px-0">
+        <nav class="d-flex justify-content-start pt-3" aria-label="Navigation secondaire">
+          <ul class="nav flex-column align-items-end">
+            <li><a class="nav-link m-2 active" href="/accueil" aria-label="Accueil" aria-current="page">Accueil <i
+                  class="bi bi-house-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            </li>
+            <li><a class="nav-link m-2" href="/creation" aria-label="Creation">Création <i
+                  class="bi bi-lightning-charge-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            </li>
+            <li><a class="nav-link m-2" href="/personnages_crees" aria-label="Personnages Crees">Personnages Crées <i
+                  class="bi bi-hexagon d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            </li>
+            <li><a class="nav-link m-2" href="/personnages_par_defaut" aria-label="Personnages par defaut">Personnages
+                par défaut <i
+                  class="bi bi-journals d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="col-xl-6 px-0 d-flex align-items-end justify-content-center">
-      <div class="container-description">
-        <h2>Le Warlock</h2>
-        <p class="p-2">Un sorcier (ou occultiste, de l’anglais ‘warlock’) est défini par un pacte avec un être
-          d'un
-          autre monde. Parfois, la relation entre le sorcier et le patron ressemble à celle d'un clerc et d'une
-          divinité, bien que les êtres qui servent de patrons aux sorciers ne soient pas des dieux. Un sorcier
-          peut
-          diriger un culte dédié à un prince démon, un archidiable ou une entité totalement extraterrestre - des
-          êtres qui ne sont généralement pas servis par des clercs. Le plus souvent, cependant, l'arrangement
-          est
-          similaire à celui entre un maître et un apprenti. Le sorcier apprend et grandit en puissance, au prix
-          de
-          services occasionnels rendus au nom du patron. </p>
-        <p class="p-2">
-          La magie conférée à un sorcier va de modifications mineures mais durables de l'être du sorcier (comme
-          la
-          capacité de voir dans l'obscurité ou de lire n'importe quelle langue) à l'accès à des sorts puissants.
-          Contrairement aux sorciers livresques, les sorciers complètent leur magie avec une certaine facilité
-          au
-          combat au corps à corps. Ils sont à l'aise en armure légère et savent manier des armes simples.
-          Les sorciers sont animés par un besoin insatiable de connaissances et de pouvoir, qui les contraint à
-          leurs pactes et façonne leur vie. Cette soif pousse les sorciers dans leurs pactes et façonne
-          également
-          leur carrière ultérieure.</p>
-        <p class="p-2"> Les histoires de sorciers se liant à des démons sont largement connues. Mais de nombreux
-          sorciers servent des clients qui ne sont pas diaboliques. Parfois, un voyageur dans la nature arrive
-          dans
-          une tour étrangement belle, rencontre son seigneur ou sa dame féerique et tombe dans un pacte sans en
-          être
-          pleinement conscient. Et parfois, tout en se penchant sur des tomes de traditions interdites, l'esprit
-          d'un étudiant brillant mais fou s'ouvre à des réalités au-delà du monde matériel et aux êtres
-          extraterrestres qui habitent dans le vide extérieur.</p>
-        <p class="p-2">Une fois qu'un pacte est conclu, la soif de connaissances et de pouvoir d'un sorcier ne
-          peut
-          être assouvie par de simples études et recherches. Personne ne fait de pacte avec un patron aussi
-          puissant
-          s'il n'a pas l'intention d'utiliser le pouvoir ainsi acquis. Au contraire, la grande majorité des
-          sorciers
-          passent leurs journées à poursuivre activement leurs objectifs, ce qui signifie généralement une sorte
-          d'aventure. De plus, les exigences de leurs patrons poussent les sorciers vers l'aventure.
-        </p>
+      {% endblock %}
+
+      {% block contenu %}
+      <div class="col-lg-10 px-0">
+        <div class="row mx-0">
+          <div class="col-xl-6 px-0 d-flex justify-content-center align-items-center">
+            <div id="carousselAccueil" class="carousel slide w-75" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousselAccueil" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Image 1"></button>
+                <button type="button" data-bs-target="#carousselAccueil" data-bs-slide-to="1"
+                  aria-label="Image 2"></button>
+                <button type="button" data-bs-target="#carousselAccueil" data-bs-slide-to="2"
+                  aria-label="Image 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../static/img/carou1.png" class="d-block mx-auto" max-width="100%" max-height="100%"
+                    alt="Matériel occulte">
+                </div>
+                <div class="carousel-item">
+                  <img src="../static/img/carou2.png" class="d-block mx-auto" max-width="100%" max-height="100%"
+                    alt="Bataille contre un ogre">
+                </div>
+                <div class="carousel-item">
+                  <img src="../static/img/carou3.png" class="d-block mx-auto" max-width="100%" max-height="100%"
+                    alt="Partie d'échec">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousselAccueil"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousselAccueil"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+          <div class="col-xl-6 px-0 d-flex align-items-end justify-content-center">
+            <div class="container-description">
+              <h2>Le Warlock</h2>
+              <p class="p-4">Un sorcier (ou occultiste, de l’anglais ‘warlock’) est défini par un pacte avec un être
+                d'un
+                autre monde. Parfois, la relation entre le sorcier et le patron ressemble à celle d'un clerc et d'une
+                divinité, bien que les êtres qui servent de patrons aux sorciers ne soient pas des dieux. Un sorcier
+                peut
+                diriger un culte dédié à un prince démon, un archidiable ou une entité totalement extraterrestre - des
+                êtres qui ne sont généralement pas servis par des clercs. Le plus souvent, cependant, l'arrangement
+                est
+                similaire à celui entre un maître et un apprenti. Le sorcier apprend et grandit en puissance, au prix
+                de
+                services occasionnels rendus au nom du patron. </p>
+              <p class="p-4">
+                La magie conférée à un sorcier va de modifications mineures mais durables de l'être du sorcier (comme
+                la
+                capacité de voir dans l'obscurité ou de lire n'importe quelle langue) à l'accès à des sorts puissants.
+                Contrairement aux sorciers livresques, les sorciers complètent leur magie avec une certaine facilité
+                au
+                combat au corps à corps. Ils sont à l'aise en armure légère et savent manier des armes simples.
+                Les sorciers sont animés par un besoin insatiable de connaissances et de pouvoir, qui les contraint à
+                leurs pactes et façonne leur vie. Cette soif pousse les sorciers dans leurs pactes et façonne
+                également
+                leur carrière ultérieure.</p>
+              <p class="p-4"> Les histoires de sorciers se liant à des démons sont largement connues. Mais de nombreux
+                sorciers servent des clients qui ne sont pas diaboliques. Parfois, un voyageur dans la nature arrive
+                dans
+                une tour étrangement belle, rencontre son seigneur ou sa dame féerique et tombe dans un pacte sans en
+                être
+                pleinement conscient. Et parfois, tout en se penchant sur des tomes de traditions interdites, l'esprit
+                d'un étudiant brillant mais fou s'ouvre à des réalités au-delà du monde matériel et aux êtres
+                extraterrestres qui habitent dans le vide extérieur.</p>
+              <p class="p-4">Une fois qu'un pacte est conclu, la soif de connaissances et de pouvoir d'un sorcier ne
+                peut
+                être assouvie par de simples études et recherches. Personne ne fait de pacte avec un patron aussi
+                puissant
+                s'il n'a pas l'intention d'utiliser le pouvoir ainsi acquis. Au contraire, la grande majorité des
+                sorciers
+                passent leurs journées à poursuivre activement leurs objectifs, ce qui signifie généralement une sorte
+                d'aventure. De plus, les exigences de leurs patrons poussent les sorciers vers l'aventure.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+
+
     </div>
   </div>
-</div>
-
-
-</div>
-</div>
-</div>
+  </div>
 </main>
 {% endblock %}
