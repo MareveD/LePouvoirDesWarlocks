@@ -240,3 +240,22 @@ footer figure figcaption{
         transform:scale(1); 
     }
 }
+
+//ACTIVE//
+.active{
+    color: $success !important;
+}
+.active > i {
+    border: 1px solid $success !important;
+}
+
+//FORM//
+fieldset{
+    border: 2px solid $white-o;
+    border-radius: 10px;
+}
+legend{
+    color: $white-o;
+    background-color: $primary;
+    border-radius: 10px;
+}

@@ -11377,5 +11377,23 @@ footer figure figcaption {
     transform: scale(1);
   }
 }
+.active {
+  color: #81bf28 !important;
+}
+
+.active > i {
+  border: 1px solid #81bf28 !important;
+}
+
+fieldset {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+}
+
+legend {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #493B75;
+  border-radius: 10px;
+}
 
 /*# sourceMappingURL=styles.css.map */
