@@ -33,32 +33,31 @@ h1 {
     letter-spacing: 0.1em;
     text-shadow: 4px 4px 10px $black;
     position: relative;
-}
 
-h1::before {
-    content: url('../img/sorciere-ban.png');
-    position: absolute;
-    top: -70px;
-    left: -310px;
-    z-index: 3;
-}
+    &:before {
+        content: url('../img/sorciere-ban.png');
+        position: absolute;
+        top: -70px;
+        left: -310px;
+        z-index: 3;
+    }
 
+    span {
+        font-family: 'Raleway', sans-serif;
+        color: $gray-500;
+        text-transform: uppercase;
+        font-size: 1.7vw;
+        letter-spacing: 0.35em;
+        font-weight: 700;
+        line-height: 5rem;
+        text-shadow: 4px 4px 5px $black;
+        display: block;
+    }
+}
 @media (max-width:1024px) {
     h1::before {
         display: none;
     }
-}
-
-h1 span {
-    font-family: 'Raleway', sans-serif;
-    color: $gray-500;
-    text-transform: uppercase;
-    font-size: 1.7vw;
-    letter-spacing: 0.35em;
-    font-weight: 700;
-    line-height: 5rem;
-    text-shadow: 4px 4px 5px $black;
-    display: block;
 }
 
 h2 {
@@ -71,6 +70,12 @@ p {
     font-family: 'Raleway', sans-serif;
     font-size: 0.9em;
 }
+// BOITE FLEX CENTRÉE //
+.container-flex-centrer{
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+}
 
 .navbar {
     background-color: $gray-o;
@@ -79,41 +84,36 @@ p {
     left: 0;
     width: 100%;
     z-index: 2;
-}
-
-.navbar form button i {
-    color: $success;
-    font-size: 1.5rem;
-}
-
-.navbar form input {
-    border: 1px solid $success !important;
-}
-
-.navbar ul {
-    width: 85%;
-    justify-content: flex-end;
-}
-
-.navbar ul li {
-    margin-right: 2rem;
-}
-
-.navbar ul li a {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: $success !important;
-}
-
-.navbar ul li a>i {
-    font-size: 1.2rem;
-    margin-right: 0.5rem;
-}
-
-.navbar form {
-    width: 15%;
+    form {
+        width: 15%;
+        input {
+            border: 1px solid $success !important;
+        }
+        button {
+            i {
+            color: $success;
+            font-size: 1.5rem;
+            }
+        }
+    }
+    ul {
+        width: 85%;
+        justify-content: flex-end;
+        li {
+            margin-right: 2rem;
+            a {
+                font-family: 'Raleway', sans-serif;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: $success !important;
+                i {
+                    font-size: 1.2rem;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
 }
 
 header {
@@ -122,47 +122,44 @@ header {
     background-size: cover;
 }
 
-main nav {
+.nav-secondaire{
     background-color: $gray-o;
     width: 100%;
     height: 100%;
-}
 
-main nav ul {
-    width: 90%;
+    ul {
+        width: 90%;
+        a {
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            color: $gray-500;
+            font-size: 0.8rem;
+            font-weight: 700;
+            position: relative;
+            &:hover {
+                color: $success !important;
+            }
+            &:focus{
+                color: $success !important;
+            }
+            &:hover .icon-nav {
+                animation: wobble 1s ease;
+            }
+            i {
+                position: absolute;
+                right: -30px;
+                top: 0;
+                font-size: 1.3em;
+            }
+        }
+    }
 }
-
-main nav a {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    color: $gray-500 !important;
-    font-size: 0.8rem;
-    font-weight: 700;
-    position: relative;
-}
-
-main nav a:hover {
-    color: $success !important;
-}
-
-main nav a i {
-    position: absolute;
-    right: -30px;
-    top: 0;
-    font-size: 1.3em;
-}
-
 .icon-nav {
     width: 35px;
     height: 35px;
     background-color: $gray-f;
     color: $success;
 }
-
-main nav a:hover .icon-nav {
-    animation: wobble 1s ease;
-}
-
 @keyframes wobble {
 
     0%,
@@ -191,26 +188,36 @@ main nav a:hover .icon-nav {
         transform: translateX(-3px) rotate(-1.2deg);
     }
 }
+// Active //
+.active {
+    color: $success !important; 
+    i {
+        border: 1px solid $success !important;
+    }
+}
+
+// DESCRIPTION ACCUEIL //
 
 .container-description {
     margin: 5em 0;
     border-radius: 10px 0 0 10px;
     background-color: $white-o;
     padding: 1em 0;
+
+    h2 {
+        position: relative;
+        text-align: center;
+        margin: 0.5em 0;
+        &:before {
+            content: url('../img/symbole-title.png');
+            position: absolute;
+            top: -40px;
+            left: 45px;
+        }
+    }
 }
 
-.container-description h2 {
-    position: relative;
-    text-align: center;
-    margin: 0.5em 0;
-}
-
-.container-description h2::before {
-    content: url('../img/symbole-title.png');
-    position: absolute;
-    top: -40px;
-    left: 45px;
-}
+// FOOTER //
 
 footer {
     background-image: url("../img/banniere.png");
@@ -221,18 +228,23 @@ footer {
     color: $gray-500 !important;
     font-size: 0.8rem;
     font-weight: 700;
+
+    figure{
+        figcaption {
+            color: $success !important;
+            font-size: 0.7em;
+            text-align: center;
+        }
+    }
+
 }
 
-footer figure figcaption {
-    color: $success !important;
-    font-size: 0.7em;
-    text-align: center;
-}
-
+// MODAL //
 .modal a:hover {
     text-decoration: underline;
 }
 
+// PAGE PERSONNAGES CRÉÉS //
 .card-container {
     width: 385px;
     min-height: 285px;
@@ -246,12 +258,12 @@ footer figure figcaption {
     margin: 5em auto;
     background-color: $white-o;
     border-radius: 10px;
-}
 
-.uni-container h2 {
-    position: relative;
-    text-align: center;
-    margin: 0.5em 0;
+    h2 {
+        position: relative;
+        text-align: center;
+        margin: 0.5em 0;
+    }
 }
 
 //ANIMATION//
@@ -288,28 +300,27 @@ footer figure figcaption {
     @include fade-in('500ms');
 }
 
-//ACTIVE//
-.active {
-    color: $success !important;
-}
-
-.active>i {
-    border: 1px solid $success !important;
-}
-
-//FORM//
+// FORMULAIRE //
 fieldset {
     border: 2px solid $white-o;
     border-radius: 10px;
+    legend {
+        color: $white-o;
+        background-color: $primary;
+        border-radius: 10px;
+    }
 }
 
-legend {
-    color: $white-o;
-    background-color: $primary;
-    border-radius: 10px;
+// FIL D'ARIANE //
+.breadcrumb-item {
+    font-size:0.8rem;
+    font-family: 'Raleway', sans-serif;
+    a{
+        color:$gray-200 !important;
+    }
 }
-
-//BREADCRUMB//
-.container-fluid>.row>nav{
-    background-color: $primary-o !important;
+.breadcrumb{
+    .active{
+        color:$white !important;
+    }
 }

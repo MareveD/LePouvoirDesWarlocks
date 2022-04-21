@@ -9,21 +9,21 @@ Création de personnages
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 px-0" role="navigation">
-        <nav class="d-flex justify-content-start pt-3" aria-label="Navigation secondaire">
+        <nav class="d-flex justify-content-start pt-3 nav-secondaire" aria-label="Navigation secondaire">
           <ul class="nav flex-column align-items-end">
 
             <li><a class="nav-link m-2" href="/accueil" aria-label="Accueil">Accueil <i
-                  class="bi bi-house-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+                  class="bi bi-house-fill container-flex-centrer icon-nav rounded-circle"></i></a>
             </li>
-            <li><a class="nav-link m-2 active" href="/creation" aria-label="Creation" aria-current="page">Création <i
-                  class="bi bi-lightning-charge-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            <li><a class="nav-link m-2 active" href="/creation" aria-label="Création" aria-current="page">Création <i
+                  class="bi bi-lightning-charge-fill container-flex-centrer icon-nav rounded-circle"></i></a>
             </li>
-            <li><a class="nav-link m-2" href="/personnages_crees" aria-label="Personnages Crees">Personnages Crées <i
-                  class="bi bi-hexagon d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            <li><a class="nav-link m-2" href="/personnages_crees" aria-label="Personnages Créés">Personnages Crées <i
+                  class="bi bi-hexagon container-flex-centrer icon-nav rounded-circle"></i></a>
             </li>
-            <li><a class="nav-link m-2" href="/personnages_par_defaut" aria-label="Personnages par defaut">Personnages
+            <li><a class="nav-link m-2" href="/personnages_par_defaut" aria-label="Personnage par défaut">Personnage
                 par défaut <i
-                  class="bi bi-journals d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+                  class="bi bi-journals container-flex-centrer icon-nav rounded-circle"></i></a>
             </li>
           </ul>
         </nav>
@@ -31,188 +31,217 @@ Création de personnages
       {% endblock %}
 
       {% block contenu %}
-      <div class="col-lg-10 px-0 d-flex justify-content-center">
-        <form action="https://philippefleury.com/backend.php" method="post" class="uni-container m-3">
-          <fieldset class="m-3 p-3">
-            <legend class="text-center fw-bold text-uppercase p-1">Votre Personnage</legend>
-            <div class="row">
-              <div class="col-xl-6">
-                <div class="mb-3">
-                  <label for="prenom" class="form-label fw-bold fst-italic">Prénom</label>
-                  <input type="text" class="form-control" id="prenom" name="prenom">                
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="mb-3">
-                  <label for="nom" class="form-label fw-bold fst-italic">Nom</label>
-                  <input type="text" class="form-control" id="nom" name="nom">                
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-12 fw-bold fst-italic mt-3 mb-3">Choisir le sexe du personnage
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-6">
-                <label class="form-check-label" for="femme">
-                  <figure class="figure">
-                    <img src="../static/img/warlock_femme.png" class="figure-img w-50 rounded" alt="Warlock Femme">
-                    <div class="form-check"><input class="form-check-input" type="radio" name="sexePersonnage"
-                        id="femme">
-                      <figcaption class="figure-caption">Warlock Femme</figcaption>
-                    </div>
-                  </figure>
-                </label>
-              </div>
-              <div class="col-xl-6">
-                <label class="form-check-label" for="homme">
-                  <figure class="figure">
-                    <img src="../static/img/warlock_homme.png" class="figure-img w-50 rounded" alt="Warlock Homme">
-                    <div class="form-check"><input class="form-check-input" type="radio" name="sexePersonnage"
-                        id="homme">
-                      <figcaption class="figure-caption">Warlock Homme</figcaption>
-                    </div>
-                  </figure>
-                </label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-12 fw-bold fst-italic mt-3 mb-3">Choisir votre Pacte
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-6">
-                <div class="form-check d-flex align-items-center mt-1">
-                  <input class="form-check-input me-2" type="radio" name="pacte" id="tome" checked>
-                  <label class="form-check-label d-flex align-items-center" for="tome">
-                    <div class="d-flex justify-content-center align-items-center icon-nav rounded-circle me-2"><i
-                        class="bi bi-book"></i></div> Pacte du Tome
-                  </label>
-                </div>
-                <div class="form-check d-flex align-items-center mt-1">
-                  <input class="form-check-input me-2" type="radio" name="pacte" id="chaine">
-                  <label class="form-check-label d-flex align-items-center" for="chaine">
-                    <div class="d-flex justify-content-center align-items-center icon-nav rounded-circle me-2"><i
-                        class="bi bi-link"></i></div> Pacte de la Chaîne
-                  </label>
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="form-check d-flex align-items-center mt-1">
-                  <input class="form-check-input me-2" type="radio" name="pacte" id="lame">
-                  <label class="form-check-label d-flex align-items-center" for="lame">
-                    <div class="d-flex justify-content-center align-items-center icon-nav rounded-circle me-2"><i
-                        class="bi bi-shield-fill"></i></div> Pacte de la Lame
-                  </label>
-                </div>
-                <div class="form-check d-flex align-items-center mt-1">
-                  <input class="form-check-input me-2" type="radio" name="pacte" id="talisman">
-                  <label class="form-check-label d-flex align-items-center" for="talisman">
-                    <div class="d-flex justify-content-center align-items-center icon-nav rounded-circle me-2"><i
-                        class="bi bi-gem"></i></div> Pacte du Talisman
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-12">
-                <div class="mb-3">
-                  <label for="descriptionPersonnage" class="form-label fw-bold fst-italic mt-3 mb-3">Description du
-                    personnage</label>
-                    <textarea class="form-control" name="descriptionPersonnage" id="descriptionPersonnage" rows="3"></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-12">
-                <label for="patron" class="form-label fw-bold fst-italic mt-3 mb-3">Choisir un Patron</label>
-                <input class="form-control" list="patronOptions" id="patron" name="patron" placeholder="Séléctionnez votre Patron">
-                <datalist id="patronOptions">
-                  <option value="L'Archifey">
-                  <option value="Le Céleste">
-                  <option value="L'Insondable">
-                  <option value="Le Diable">
-                  <option value="Le Génie">
-                  <option value="L'Ancien">
-                  <option value="La Lame Maudite">
-                  <option value="Le Mort-Vivant">
-                  <option value="L'Intuable">
-                </datalist>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset class="m-3 p-3">
-            <legend class="text-center fw-bold text-uppercase p-1">Statistiques de votre Personnage</legend>
-            <div class="row">
-              <div class="col-xl-6">
-
-                <div class="rangeForce">
-                  <label for="force" class="form-label fw-bold fst-italic mt-3 mb-3">Force</label> <span id="valeurForce"></span>
-                  <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="force" name="force">
-                </div>
-
-                <div class="rangeIntelligence">
-                  <label for="intelligence" class="form-label fw-bold fst-italic mt-3 mb-3">Intelligence</label> <span id="valeurIntelligence"></span>
-                  <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="intelligence"
-                    name="intelligence">
-                  </div>
-
-                <div class="rangeDexterite">
-                  <label for="dexterite" class="form-label fw-bold fst-italic mt-3 mb-3">Dextérité</label> <span id="valeurDexterite"></span>
-                  <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="dexterite"
-                    name="dexterite">
-                  </div>
-              </div>
-
-              <div class="col-xl-6">
-                <div class="rangeConstitution">
-                  <label for="constitution" class="form-label fw-bold fst-italic mt-3 mb-3">Constitution</label> <span id="valeurConstitution"></span>
-                  <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="constitution"
-                    name="constitution">
-                  </div>
-
-                <div class="rangeSagesse">
-                  <label for="sagesse" class="form-label fw-bold fst-italic mt-3 mb-3">Sagesse</label> <span id="valeurSagesse"></span>
-                  <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="sagesse"
-                    name="sagesse">
-                  </div>
-
-                <div class="rangeCharisme">
-                  <label for="charisme" class="form-label fw-bold fst-italic mt-3 mb-3">Charisme</label> <span id="valeurCharisme"></span>
-                  <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="charisme"
-                    name="charisme">
-                  </div>
-              </div>
-
-            </div>
-          </fieldset>
-          <fieldset class="m-3 p-3">
-            <legend class="text-center fw-bold text-uppercase p-1">Votre Avatar</legend>
-            <div class="row">
-              <div class="col-xl-6">
-                <label for="exampleColorInput" class="form-label fw-bold fst-italic mt-3 mb-3">Fond de votre
-                  avatar</label>
-                  <input type="color" class="form-control form-control-color" name="ColorFond" id="ColorFond" value="#563d7c"
-                  title="Choisissez votre couleur">
-              </div>
-              <div class="col-xl-6">
-                <div class="mb-3">
-                  <label for="formFile" class="form-label fw-bold fst-italic mt-3 mb-3">Télécharger votre avatar</label>
-                  <input class="form-control" type="file" id="formFile" name="formFile" aria-describedby="formatImageAvatar">
-            <div id="formatImageAvatar" class="form-text">
-                    Seuls les formats .jpg, .png et .gif sont autorisés
-                  </div>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary">Créer son personnage</button>
-            <button type="reset" class="btn btn-primary">Réinitialiser</button>
-            <button type="reset" class="btn btn-light border-primary"><i class="bi bi-dice-6-fill"></i></button>
+      <div class="col-lg-10 px-0">
+        <div class="row mx-0">
+          <div class="col-xl-12 px-0">
+            <nav
+              style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+              aria-label="fil d'ariane">
+              <ol class="breadcrumb justify-content-end pe-3 fw-bold text-uppercase">
+                <li class="breadcrumb-item"><a href="/accueil">Accueil</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Création de personnage</li>
+              </ol>
+            </nav>
           </div>
-        </form>
+        </div>
+        <div class="row mx-0">
+          <div class="col-lg-12 px-0 d-flex justify-content-center">
+            <form action="https://philippefleury.com/backend.php" method="post" class="uni-container m-3">
+              <fieldset class="m-3 p-3">
+                <legend class="text-center fw-bold text-uppercase p-1">Votre Personnage</legend>
+                <div class="row">
+                  <div class="col-xl-6">
+                    <div class="mb-3">
+                      <label for="prenom" class="form-label fw-bold fst-italic">Prénom</label>
+                      <input type="text" class="form-control" id="prenom" name="prenom">
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="mb-3">
+                      <label for="nom" class="form-label fw-bold fst-italic">Nom</label>
+                      <input type="text" class="form-control" id="nom" name="nom">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12 fw-bold fst-italic mt-3 mb-3">Choisir le sexe du personnage
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-6">
+                    <label class="form-check-label" for="femme">
+                      <figure class="figure">
+                        <img src="../static/img/warlock_femme.png" class="figure-img w-50 rounded" alt="Warlock Femme">
+                        <div class="form-check"><input class="form-check-input" type="radio" name="sexePersonnage"
+                            id="femme">
+                          <figcaption class="figure-caption">Warlock Femme</figcaption>
+                        </div>
+                      </figure>
+                    </label>
+                  </div>
+                  <div class="col-xl-6">
+                    <label class="form-check-label" for="homme">
+                      <figure class="figure">
+                        <img src="../static/img/warlock_homme.png" class="figure-img w-50 rounded" alt="Warlock Homme">
+                        <div class="form-check"><input class="form-check-input" type="radio" name="sexePersonnage"
+                            id="homme">
+                          <figcaption class="figure-caption">Warlock Homme</figcaption>
+                        </div>
+                      </figure>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12 fw-bold fst-italic mt-3 mb-3">Choisir votre Pacte
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-6">
+                    <div class="form-check d-flex align-items-center mt-1">
+                      <input class="form-check-input me-2" type="radio" name="pacte" id="tome" checked>
+                      <label class="form-check-label d-flex align-items-center" for="tome">
+                        <div class="container-flex-centrer icon-nav rounded-circle me-2"><i
+                            class="bi bi-book"></i></div> Pacte du Tome
+                      </label>
+                    </div>
+                    <div class="form-check d-flex align-items-center mt-1">
+                      <input class="form-check-input me-2" type="radio" name="pacte" id="chaine">
+                      <label class="form-check-label d-flex align-items-center" for="chaine">
+                        <div class="container-flex-centrer icon-nav rounded-circle me-2"><i
+                            class="bi bi-link"></i></div> Pacte de la Chaîne
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="form-check d-flex align-items-center mt-1">
+                      <input class="form-check-input me-2" type="radio" name="pacte" id="lame">
+                      <label class="form-check-label d-flex align-items-center" for="lame">
+                        <div class="container-flex-centrer icon-nav rounded-circle me-2"><i
+                            class="bi bi-shield-fill"></i></div> Pacte de la Lame
+                      </label>
+                    </div>
+                    <div class="form-check d-flex align-items-center mt-1">
+                      <input class="form-check-input me-2" type="radio" name="pacte" id="talisman">
+                      <label class="form-check-label d-flex align-items-center" for="talisman">
+                        <div class="container-flex-centrer icon-nav rounded-circle me-2"><i
+                            class="bi bi-gem"></i></div> Pacte du Talisman
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12">
+                    <div class="mb-3">
+                      <label for="descriptionPersonnage" class="form-label fw-bold fst-italic mt-3 mb-3">Description du
+                        personnage</label>
+                      <textarea class="form-control" name="descriptionPersonnage" id="descriptionPersonnage"
+                        rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12">
+                    <label for="patron" class="form-label fw-bold fst-italic mt-3 mb-3">Choisir un Patron</label>
+                    <input class="form-control" list="patronOptions" id="patron" name="patron"
+                      placeholder="Séléctionnez votre Patron">
+                    <datalist id="patronOptions">
+                      <option name="archifey" value="L'Archifey">
+                      <option name="celeste" value="Le Céleste">
+                      <option name="insondable" value="L'Insondable">
+                      <option name="diable" value="Le Diable">
+                      <option name="genie" value="Le Génie">
+                      <option name="ancien" value="L'Ancien">
+                      <option name="lameMaudite" value="La Lame Maudite">
+                      <option name="mortVivant" value="Le Mort-Vivant">
+                      <option name="intuable" value="L'Intuable">
+                    </datalist>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="m-3 p-3">
+                <legend class="text-center fw-bold text-uppercase p-1">Statistiques de votre Personnage</legend>
+                <div class="row">
+                  <div class="col-xl-6">
+
+                    <div class="rangeForce">
+                      <label for="force" class="form-label fw-bold fst-italic mt-3 mb-3">Force</label> <span
+                        id="valeurForce"></span>
+                      <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="force"
+                        name="force">
+                    </div>
+
+                    <div class="rangeIntelligence">
+                      <label for="intelligence" class="form-label fw-bold fst-italic mt-3 mb-3">Intelligence</label>
+                      <span id="valeurIntelligence"></span>
+                      <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="intelligence"
+                        name="intelligence">
+                    </div>
+
+                    <div class="rangeDexterite">
+                      <label for="dexterite" class="form-label fw-bold fst-italic mt-3 mb-3">Dextérité</label> <span
+                        id="valeurDexterite"></span>
+                      <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="dexterite"
+                        name="dexterite">
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <div class="rangeConstitution">
+                      <label for="constitution" class="form-label fw-bold fst-italic mt-3 mb-3">Constitution</label>
+                      <span id="valeurConstitution"></span>
+                      <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="constitution"
+                        name="constitution">
+                    </div>
+
+                    <div class="rangeSagesse">
+                      <label for="sagesse" class="form-label fw-bold fst-italic mt-3 mb-3">Sagesse</label> <span
+                        id="valeurSagesse"></span>
+                      <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="sagesse"
+                        name="sagesse">
+                    </div>
+
+                    <div class="rangeCharisme">
+                      <label for="charisme" class="form-label fw-bold fst-italic mt-3 mb-3">Charisme</label> <span
+                        id="valeurCharisme"></span>
+                      <input type="range" min="0" max="20" step="1" value="10" class="form-range" id="charisme"
+                        name="charisme">
+                    </div>
+                  </div>
+
+                </div>
+              </fieldset>
+              <fieldset class="m-3 p-3">
+                <legend class="text-center fw-bold text-uppercase p-1">Votre Avatar</legend>
+                <div class="row">
+                  <div class="col-xl-6">
+                    <label for="exampleColorInput" class="form-label fw-bold fst-italic mt-3 mb-3">Fond de votre
+                      avatar</label>
+                    <input type="color" class="form-control form-control-color" name="ColorFond" id="ColorFond"
+                      value="#563d7c" title="Choisissez votre couleur">
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label fw-bold fst-italic mt-3 mb-3">Télécharger votre
+                        avatar</label>
+                      <input class="form-control" type="file" id="formFile" name="formFile"
+                        aria-describedby="formatImageAvatar">
+                      <div id="formatImageAvatar" class="form-text">
+                        Seuls les formats .jpg, .png et .gif sont autorisés
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" aria-label="Créer son personnage">Créer son
+                  personnage</button>
+                <button type="reset" class="btn btn-primary" aria-label="Réinitialiser">Réinitialiser</button>
+                <button type="reset" class="btn btn-light border-primary" aria-label="Personnage aléatoire"><i
+                    class="bi bi-dice-6-fill"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>

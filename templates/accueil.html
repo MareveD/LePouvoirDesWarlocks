@@ -9,20 +9,20 @@ Accueil
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 px-0">
-        <nav class="d-flex justify-content-start pt-3" aria-label="Navigation secondaire">
+        <nav class="d-flex justify-content-start pt-3 nav-secondaire" aria-label="Navigation secondaire">
           <ul class="nav flex-column align-items-end">
             <li><a class="nav-link m-2 active" href="/accueil" aria-label="Accueil" aria-current="page">Accueil <i
-                  class="bi bi-house-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+                  class="bi bi-house-fill container-flex-centrer icon-nav rounded-circle"></i></a>
             </li>
-            <li><a class="nav-link m-2" href="/creation" aria-label="Creation">Création <i
-                  class="bi bi-lightning-charge-fill d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            <li><a class="nav-link m-2" href="/creation" aria-label="Création">Création <i
+                  class="bi bi-lightning-charge-fill container-flex-centrer icon-nav rounded-circle"></i></a>
             </li>
-            <li><a class="nav-link m-2" href="/personnages_crees" aria-label="Personnages Crees">Personnages Crées <i
-                  class="bi bi-hexagon d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+            <li><a class="nav-link m-2" href="/personnages_crees" aria-label="Personnages Créés">Personnages Crées <i
+                  class="bi bi-hexagon container-flex-centrer icon-nav rounded-circle"></i></a>
             </li>
-            <li><a class="nav-link m-2" href="/personnages_par_defaut" aria-label="Personnages par defaut">Personnages
+            <li><a class="nav-link m-2" href="/personnages_par_defaut" aria-label="Personnage par défaut">Personnage
                 par défaut <i
-                  class="bi bi-journals d-flex justify-content-center align-items-center icon-nav rounded-circle"></i></a>
+                  class="bi bi-journals container-flex-centrer icon-nav rounded-circle"></i></a>
             </li>
           </ul>
         </nav>
@@ -32,7 +32,7 @@ Accueil
       {% block contenu %}
       <div class="col-lg-10 px-0">
         <div class="row mx-0">
-          <div class="col-xl-6 px-0 d-flex justify-content-center align-items-center">
+          <div class="col-xl-6 px-0 container-flex-centrer">
             <div id="carousselAccueil" class="carousel slide w-75" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carousselAccueil" data-bs-slide-to="0" class="active"
@@ -57,11 +57,11 @@ Accueil
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carousselAccueil"
-                data-bs-slide="prev">
+                data-bs-slide="prev" aria-label="Précédent">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#carousselAccueil"
-                data-bs-slide="next">
+                data-bs-slide="next" aria-label="Suivant">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
               </button>
             </div>
@@ -81,23 +81,14 @@ Accueil
                 de
                 services occasionnels rendus au nom du patron. </p>
               <p class="p-4">
-                La magie conférée à un sorcier va de modifications mineures mais durables de l'être du sorcier (comme
-                la
-                capacité de voir dans l'obscurité ou de lire n'importe quelle langue) à l'accès à des sorts puissants.
-                Contrairement aux sorciers livresques, les sorciers complètent leur magie avec une certaine facilité
-                au
-                combat au corps à corps. Ils sont à l'aise en armure légère et savent manier des armes simples.
-                Les sorciers sont animés par un besoin insatiable de connaissances et de pouvoir, qui les contraint à
-                leurs pactes et façonne leur vie. Cette soif pousse les sorciers dans leurs pactes et façonne
-                également
-                leur carrière ultérieure.</p>
+                La magie conférée à un sorcier va de modifications mineures, telles que la capacité de voir dans l'obscurité ou de lire n'importe quelle langue, à l'accès à des sorts puissants. Contrairement aux sorciers livresques, les sorciers complètent leur magie avec une certaine facilité au combat au corps à corps. Ils sont à l'aise en armure légère et savent manier des armes simples. Les sorciers sont animés par un besoin insatiable de connaissances et de pouvoir, qui les contraint à leurs pactes et façonne leur vie. Cette soif pousse les sorciers dans leurs pactes et façonne également leur carrière ultérieure.</p>
               <p class="p-4"> Les histoires de sorciers se liant à des démons sont largement connues. Mais de nombreux
                 sorciers servent des clients qui ne sont pas diaboliques. Parfois, un voyageur dans la nature arrive
                 dans
                 une tour étrangement belle, rencontre son seigneur ou sa dame féerique et tombe dans un pacte sans en
                 être
                 pleinement conscient. Et parfois, tout en se penchant sur des tomes de traditions interdites, l'esprit
-                d'un étudiant brillant mais fou s'ouvre à des réalités au-delà du monde matériel et aux êtres
+                d'un étudiant brillant, mais fou s'ouvre à des réalités au-delà du monde matériel et aux êtres
                 extraterrestres qui habitent dans le vide extérieur.</p>
               <p class="p-4">Une fois qu'un pacte est conclu, la soif de connaissances et de pouvoir d'un sorcier ne
                 peut
