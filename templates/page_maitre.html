@@ -74,8 +74,9 @@
   {% block navigation %}
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <button class="navbar-toggler bg-success" type="button" data-bs-toggle="collapse" data-bs-target="#navigationToggle"
-        aria-controls="navigationToggle" aria-expanded="false" aria-label="Bouton de menu">
+      <button class="navbar-toggler bg-success" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navigationToggle" aria-controls="navigationToggle" aria-expanded="false"
+        aria-label="Bouton de menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navigationToggle">
@@ -88,8 +89,8 @@
               Connexion</a></li>
         </ul>
         <form class="d-flex align-items-center">
-          <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#fenetreLien" arial-label="Bouton Recherche"><i
-              class="bi bi-search"></i></button>
+          <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#fenetreLien"
+            aria-label="Bouton Recherche"><i class="bi bi-search"></i></button>
           <input class="form-control-plaintext p-2 btn-outline-success rounded-pill" type="search"
             placeholder="Rechercher" aria-label="Rechercher">
         </form>
@@ -97,7 +98,6 @@
     </div>
   </nav>
   {% endblock %}
-
 
 
   {% block header %}
@@ -108,13 +108,10 @@
   {% endblock %}
 
 
-
   {% block menu %} {% endblock %}
 
 
-
   {% block contenu %} {% endblock %}
-
 
 
   {% block footer %}
@@ -139,7 +136,8 @@
                 quand la connaissance et le pouvoir sont là pour être pris dans le royaume de l'au-delà
               </p>
             </blockquote>
-            <figcaption class="blockquote-footer" aria-label="Auteur">Xarren, <cite title="Source" aria-label="Source">Héraut
+            <figcaption class="blockquote-footer" aria-label="Auteur">Xarren, <cite title="Source"
+                aria-label="Source">Héraut
                 d'Acamar</cite>
             </figcaption>
           </figure>
@@ -151,8 +149,6 @@
     <script src="{{ url_for('static', filename='js/range.js') }}"></script>
   </footer>
   {% endblock %}
-
-
 </body>
 
 </html>
